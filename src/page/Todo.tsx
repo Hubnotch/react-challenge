@@ -22,6 +22,8 @@ function Todo() {
   const handleDeleteTodo = (id:number) => {
     setTodos(todos.filter(ele => ele.id !== id))
   }
+  console.log(todos);
+  
   return (
     <div>
       <AddTodo 

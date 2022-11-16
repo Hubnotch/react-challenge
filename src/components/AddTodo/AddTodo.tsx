@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function AddTodo({addTodo}:any) {
+function AddTodo({onAddTodo}:any) {
     const [title,setTitlte] = useState('');
 
   return (
@@ -12,7 +12,7 @@ function AddTodo({addTodo}:any) {
       />
       <button onClick={()=>{
         setTitlte('');
-        addTodo(title)
+        onAddTodo(title)
       }}>Add</button>
     </div>
   )
