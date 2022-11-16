@@ -1,12 +1,30 @@
 import React from 'react'
-import { IButton } from '../../typings'
-import "../../styles/form.css";
-const  Button =(props:IButton):JSX.Element =>{
-  return (
-    <div className="row">
-    <button>{props.title}</button>
-    </div>
-  )
+import { ButtonArea } from '../../styles/styles'
+import { IButtonProps } from '../../typings';
+
+
+function Button({ 
+  background,
+  color,
+  height,
+  children,
+  width,
+  onclick,
+  disabled,
+  ...props}:IButtonProps) {
+    return (
+      <ButtonArea
+        background={background}
+        color={color}
+        height={height}
+        width={width}
+        disabled={disabled}
+        onClick={onclick}
+        {...props}
+      >
+        {children}
+      </ButtonArea>
+    );
 }
 
 export default Button

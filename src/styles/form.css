@@ -3,7 +3,7 @@
     font-weight: 700;
     text-align: center;
     padding: 2.3rem 0;
-
+    line-height: normal;
 }
 
 .loginForm{
@@ -48,7 +48,6 @@ height: 32px;
 
 .row button{
     width: 80%;
-    height: 40px;
     background-color: #1277cc;
     color: #fff;
     font-size: 1.3rem;
