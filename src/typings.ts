@@ -31,3 +31,8 @@ export interface IButtonProps {
     disabled?: boolean;
   }
   
+  export interface ITodoStore {
+    id:number;
+    title: string;
+    completed: boolean;
+  }
