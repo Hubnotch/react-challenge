@@ -16,17 +16,6 @@ min-height: 100%;
 max-height: 100%;
 `;
 
-// export const LoginButton = styled.button`
-//     width: 80%;
-//     background-color: #1277cc;
-//     color: #fff;
-//     font-size: 1.3rem;
-//     padding: 1rem 0;
-//     border: none;
-//     border-radius: 0.5rem;
-//     margin-top: 2rem;
-//     cursor: pointer;
-// `;
 export const FormContainer = styled.div`
     max-width: 500px;
     min-width: 300px;
@@ -146,7 +135,19 @@ cursor: pointer;
 `;
 
 
+export const List = styled.ul`
+margin: 0;
+padding: 0;
 
+li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+`;
 
 
 

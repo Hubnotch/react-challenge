@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./page/Form";
+// import Form from "./page/Form";
 import Todo from "./page/Todo";
 import { BodyContainer, FormContainer } from "./styles/styles";
 
@@ -7,8 +7,7 @@ function App(): JSX.Element {
   return (
 <BodyContainer>
 <FormContainer>
-      <Form />
-      <br /><hr /><br />
+      {/* <Form /> */}
       <Todo/>
    </FormContainer>
 </BodyContainer>

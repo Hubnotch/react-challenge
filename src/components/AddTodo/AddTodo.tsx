@@ -1,21 +1,26 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
+import Input from '../Input/Input';
 
-function AddTodo({onAddTodo}:any) {
-    const [title,setTitlte] = useState('');
-
-  return (
-    <div>
-      <input type="text" 
-      placeholder='Add Todo'
-      value={title} 
-      onChange={(e)=>setTitlte(e.target.value)}
-      />
-      <button onClick={()=>{
+function AddTodo({ onAddTodo }: any) {
+    const [title, setTitlte] = useState('');
+    
+    const handleClick = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
         setTitlte('');
         onAddTodo(title)
-      }}>Add</button>
-    </div>
-  )
+
+    }
+    return (
+        <form>
+            <Input type="text"
+            placeholder='Add Todo'
+            value={title}
+            onChange={(e) => setTitlte(e.target.value)} 
+            name={''} 
+            autoComplete={''}            />
+            <button onClick={handleClick}>Add</button>
+        </form>
+    )
 }
 
 export default AddTodo

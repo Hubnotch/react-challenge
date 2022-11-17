@@ -1,37 +1,47 @@
 import React,{useState} from 'react'
+import { Label } from '../../styles/styles';
 import { ITodoStore } from '../../typings';
-
+// import Input from '../Input/Input';
+import "./Task.css"
 function Task({ todo, onChange, onDelete }:{todo:ITodoStore,onChange:(todo:ITodoStore)=>void,onDelete:(id:number)=>void}) {
+
     const [isEditing, setIsEditing] = useState(false);
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        setIsEditing(false);
+    }
     let todoContent;
+    
     if (isEditing) {
       todoContent = (
-        <>
-          <input
-            value={todo.title}
-            onChange={e => {
-              onChange({
-                ...todo,
-                title: e.target.value
-              });
-            }} />
-          <button onClick={() => setIsEditing(false)}>
+        <div className='Todo'>
+            <form className="Todo-edit-form" onSubmit={handleSubmit}>
+                 <input
+                  value={todo.title}
+                  onChange={e => {
+                      onChange({
+                          ...todo,
+                          title: e.target.value
+                      });
+                  } } name={''} autoComplete={''} />
+          <button>
             Save
           </button>
-        </>
+            </form>
+        </div>
       );
     } else {
       todoContent = (
-        <>
+        <div className='Todo'>
           {todo.title}
           <button onClick={() => setIsEditing(true)}>
-            Edit
+            <i className="fas fa-pen" />Edit
           </button>
-        </>
+        </div>
       );
     }
     return (
-      <label>
+      <div className='Todo'>
         <input
           type="checkbox"
           checked={todo.completed}
@@ -44,9 +54,9 @@ function Task({ todo, onChange, onDelete }:{todo:ITodoStore,onChange:(todo:ITodo
         />
         {todoContent}
         <button onClick={() => onDelete(todo.id)}>
-          Delete
+        <i className="fas fa-trash" />Delete
         </button>
-      </label>
+      </div>
     );
   }
 

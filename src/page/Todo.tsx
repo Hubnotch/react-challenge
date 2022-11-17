@@ -26,6 +26,8 @@ function Todo() {
   
   return (
     <div>
+      <h1>My To-Do List</h1>
+    <div className="TodoList">
       <AddTodo 
       onAddTodo={handleAddTodo} 
       />
@@ -34,6 +36,7 @@ function Todo() {
       onChangeTodo={handleChangeTodo} 
       onDeleteTodo={handleDeleteTodo} 
       />
+    </div>
     </div>
   )
 }

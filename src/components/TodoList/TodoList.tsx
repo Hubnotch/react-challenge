@@ -1,5 +1,6 @@
 import Task from "../Task/Task";
 import {ITodoStore} from "../../typings";
+import { List } from "../../styles/styles";
 
 function TodoList({
     todos,
@@ -7,7 +8,7 @@ function TodoList({
     onDeleteTodo
   }:{todos:ITodoStore[],onChangeTodo:(todo:ITodoStore)=>void,onDeleteTodo:(id:number)=>void}) {
     return (
-      <ul>
+      <List>
         {todos.map(todo => (
           <li key={todo.id}>
             <Task
@@ -17,7 +18,7 @@ function TodoList({
             />
           </li>
         ))}
-      </ul>
+      </List>
     );
   }
   
