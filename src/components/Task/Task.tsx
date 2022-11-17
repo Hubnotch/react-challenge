@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import { Label } from '../../styles/styles';
+
 import { ITodoStore } from '../../typings';
-// import Input from '../Input/Input';
+
 import "./Task.css"
 function Task({ todo, onChange, onDelete }:{todo:ITodoStore,onChange:(todo:ITodoStore)=>void,onDelete:(id:number)=>void}) {
 
