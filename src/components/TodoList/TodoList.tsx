@@ -6,7 +6,11 @@ function TodoList({
     todos,
     onChangeTodo,
     onDeleteTodo
-  }:{todos:ITodoStore[],onChangeTodo:(todo:ITodoStore)=>void,onDeleteTodo:(id:number)=>void}) {
+}: {
+    todos: ITodoStore[],
+    onChangeTodo: (todo: ITodoStore) => void,
+    onDeleteTodo: (id: number) => void
+}) {
     return (
       <List>
         {todos.map(todo => (

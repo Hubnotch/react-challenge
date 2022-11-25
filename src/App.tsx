@@ -7,8 +7,8 @@ function App(): JSX.Element {
   return (
 <BodyContainer>
 <FormContainer>
-      <Form />
-      {/* <Todo/> */}
+      {/* <Form /> */}
+      <Todo/>
    </FormContainer>
 </BodyContainer>
   );
